@@ -12,8 +12,17 @@ const routes = [
     method: 'GET',
     path: '/users/{username?}',
     handler: (request, h) => {
-        const { username = 'User, Happy nice day 😃' } = request.params;
-        return `Hello, Happy nice day ${username}! 😃`;
+      const { username = 'Hello User, Happy nice day 😃' } = request.params;
+      // const { lang } = request.query;
+      // if(lang === 'nama') {
+      //   return `Hai, ${username} Happy nice day 😃 `;
+      // }
+      if ( username === '' ) {
+        return `Hello User, Happy nice day 😃 ! `;
+      } else {
+        return `Hello ${username}, Happy nice day 😃 `
+      }
+      
     }
   },
   {
