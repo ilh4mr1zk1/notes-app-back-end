@@ -2,6 +2,21 @@ const { addNoteHandler, getAllNotesHandler, getNoteByIdHandler, editNoteByIdHand
 
 const routes = [
   {
+    method: 'GET',
+    path: '/',
+    handler: (request, header) => {
+        return header.response('Halo, Ini halaman utama 📃').code(200);
+    },
+  },
+  {
+    method: 'GET',
+    path: '/users/{username?}',
+    handler: (request, h) => {
+        const { username = 'User, Happy nice day 😃' } = request.params;
+        return `Hello, Happy nice day ${username}! 😃`;
+    }
+  },
+  {
     method: 'POST',
     path: '/notes',
     handler: addNoteHandler,
