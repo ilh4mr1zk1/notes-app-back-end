@@ -5,7 +5,7 @@ const routes = [
     method: 'GET',
     path: '/',
     handler: (request, header) => {
-        return header.response('Halo, Ini halaman utama 📃').code(200);
+        return header.response('Halo, CUK Ini halaman utama 📃').code(200);
     },
   },
   {
