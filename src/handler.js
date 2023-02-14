@@ -18,10 +18,7 @@ const addNoteHandler = (request, h) => {
         const response = h.response({
           status: 'success',
           message: 'Catatan berhasil ditambahkan',
-          data: {
-            noteId: id,
-            add : newNote
-          },
+          data: newNote
         });
 
         response.header('Access-Control-Allow-Origin', '*');
