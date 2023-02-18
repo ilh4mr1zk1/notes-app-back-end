@@ -9,7 +9,7 @@ const routes = (handler) => [
         method: 'GET',
         path: '/',
         handler: (request, header) => {
-            return header.response('Hello, This homepage 📃').code(200);
+            return header.response('Hello, This homepage notes 📃').code(200);
         }
     },
     {
