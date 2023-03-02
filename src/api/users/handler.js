@@ -18,13 +18,13 @@ class UsersHandler {
       this._validator.validateUserPayload(request.payload);
       const { username, password, fullname } = request.payload;
 
-      const userId = await this._service.addUser(request.payload);
+      const nameUser = await this._service.addUser(request.payload);
 
       const response = h.response({
         status: 'success',
         message: 'User berhasil ditambahkan',
         data: {
-          userId,
+          nameUser,
         },
       });
 
