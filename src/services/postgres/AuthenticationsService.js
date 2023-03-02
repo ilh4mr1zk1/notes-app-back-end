@@ -7,11 +7,6 @@ class AuthenticationsService {
     this._pool = new Pool();
   }
 
-  async getAuthentication() {
-    const result = await this._pool.query('SELECT * FROM authentications');
-    return result.rows;
-  }
-
   async addRefreshToken(token) {
     const query = {
       text: 'INSERT INTO authentications VALUES($1)',

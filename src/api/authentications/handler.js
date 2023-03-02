@@ -10,19 +10,6 @@ class AuthenticationsHandler {
     this.postAuthenticationHandler = this.postAuthenticationHandler.bind(this);
     this.putAuthenticationHandler = this.putAuthenticationHandler.bind(this);
     this.deleteAuthenticationHandler = this.deleteAuthenticationHandler.bind(this);
-    this.getAuthenticationHandler = this.getAuthenticationHandler.bind(this);
-  }
-
-  async getAuthenticationHandler() {
-
-    const authentications = await this._authenticationsService.getAuthentication();
-
-    return {
-      status: 'success',
-      data: {
-        authentications,
-      },
-    };
   }
  
   async postAuthenticationHandler(request, h) {
