@@ -12,6 +12,12 @@ const routes = (handler) => [
     handler: handler.getUserByIdHandler,
   },
 
+  {
+    method: 'GET',
+    path: '/users',
+    handler: handler.getUsersByUsernameHandler,
+  },
+
 ];
 
 module.exports = routes;
