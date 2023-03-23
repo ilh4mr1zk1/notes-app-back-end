@@ -2,10 +2,9 @@ const fs = require('fs');
  
 class StorageService {
 
-  constructor(folder, cacheService) {
+  constructor(folder) {
 
     this._folder = folder;
-    this._cacheService = cacheService;
 
     if (!fs.existsSync(folder)) {
       fs.mkdirSync(folder, { recursive: true });
